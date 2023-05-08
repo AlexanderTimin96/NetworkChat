@@ -1,14 +1,22 @@
 package ru.netology.server;
 
+import ru.netology.logger.Logger;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Server {
     private final int PORT = 8080;
     private final String HOST = "localhost";
-
+    private final static Logger logger = Logger.getInstance();
+    private List<ClientHandler> clientList = Collections.synchronizedList(new ArrayList<>());
 
     public void start() {
         try {
@@ -21,14 +29,33 @@ public class Server {
             e.printStackTrace();
             //TODO: log
         }
+        System.out.println("сервер запущен");
+        try (ServerSocket serverSocket = new ServerSocket(PORT)) {
+            while (!serverSocket.isClosed()) {
+                try (Socket clientSocket = serverSocket.accept()) {
+                    ClientHandler clientHandler = new ClientHandler(clientSocket);
+                    clientList.add(clientHandler);
+                    clientHandler.start();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            //TODO: log
+        } finally {
+            for (ClientHandler clientHandler : clientList) {
+                clientHandler.interrupt();
+            }
+        }
     }
 
     private void recordSettings(String HOST, int PORT) throws IOException {
-        BufferedWriter writer = new BufferedWriter(new FileWriter("settings.txt", false));
-        writer.write("HOST " + HOST + "\n");
-        writer.write("PORT " + PORT);
-        writer.flush();
-        writer.close();
+        FileWriter out = new FileWriter("settings.txt", false);
+        BufferedWriter in = new BufferedWriter(out);
+        in.write("HOST " + HOST + "\n");
+        in.write("PORT " + PORT);
+        in.flush();
+        in.close();
+        out.close();
         //TODO: log
     }
 }

@@ -10,9 +10,9 @@ public class Client {
     private String name;
 
     public Client() {
-        try (BufferedReader reader = new BufferedReader(new FileReader("settings.txt"))) {
+        try (BufferedReader in = new BufferedReader(new FileReader("settings.txt"))) {
             String line;
-            while ((line = reader.readLine()) != null) {
+            while ((line = in.readLine()) != null) {
                 if (line.contains("PORT")) {
                     String[] path = line.split(" ");
                     PORT = Integer.parseInt(path[1]);
