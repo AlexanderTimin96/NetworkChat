@@ -55,7 +55,6 @@ public class Client {
             out.write(name + "\n");
             out.flush();
 
-
             ServerListener serverListener = new ServerListener(in);
             serverListener.start();
 
@@ -72,7 +71,6 @@ public class Client {
 
             serverListener.interrupt();
             scanner.close();
-
         } catch (UnknownHostException e) {
             e.printStackTrace();
 

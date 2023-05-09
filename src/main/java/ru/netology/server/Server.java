@@ -39,9 +39,12 @@ public class Server {
                 clientList.add(clientHandler);
             }
         } catch (IOException e) {
-
             e.printStackTrace();
             //TODO: log
+        } finally {
+            for(ClientHandler clientHandler: clientList) {
+                clientHandler.interrupt();
+            }
         }
     }
 
