@@ -13,12 +13,13 @@ import java.util.Collections;
 import java.util.List;
 
 public class Server {
-    private final int PORT = 8080;
-    private final String HOST = "localhost";
     private final static Logger logger = Logger.getInstance();
-    private List<ClientHandler> clientList = Collections.synchronizedList(new ArrayList<>());
+    private final List<ClientHandler> clientList = Collections.synchronizedList(new ArrayList<>());
 
     public void start() {
+        int PORT = 8080;
+        String HOST = "localhost";
+
         try {
             File settings = new File("settings.txt");
             if (settings.createNewFile() || settings.exists()) {
@@ -29,22 +30,18 @@ public class Server {
             e.printStackTrace();
             //TODO: log
         }
+
         System.out.println("сервер запущен");
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
-            while (!serverSocket.isClosed()) {
-                try (Socket clientSocket = serverSocket.accept()) {
-                    ClientHandler clientHandler = new ClientHandler(clientSocket);
-                    clientList.add(clientHandler);
-                    clientHandler.start();
-                }
+            while (true) {
+                Socket clientSocket = serverSocket.accept();
+                ClientHandler clientHandler = new ClientHandler(clientSocket, clientList);
+                clientList.add(clientHandler);
             }
         } catch (IOException e) {
+
             e.printStackTrace();
             //TODO: log
-        } finally {
-            for (ClientHandler clientHandler : clientList) {
-                clientHandler.interrupt();
-            }
         }
     }
 
