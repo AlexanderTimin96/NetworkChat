@@ -25,15 +25,25 @@ public class Logger {
         return INSTANCE;
     }
 
-    public void log(String pathNameLogFile, LevelLog level, String msg) {
-        File logFile = new File(pathNameLogFile);
+    public synchronized void log(String pathNameLogFile, LevelLog level, String msg) {
         try (BufferedWriter bf = new BufferedWriter(new FileWriter(pathNameLogFile, true))) {
-            if (logFile.createNewFile() || logFile.exists()) {
-                bf.write("[" + dtf.format(LocalDateTime.now()) + "] (" + level + ") " + msg);
+                bf.write("[" + dtf.format(LocalDateTime.now()) + "] (" + level + ") " + msg + "\n");
                 bf.flush();
-            }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+    public synchronized void createFileLog(String pathNameLogFile) {
+        File file = new File(pathNameLogFile);
+       try {
+           if (!file.exists()) {
+               file.createNewFile();
+           }
+       }catch (IOException e) {
+           e.printStackTrace();
+       }
+    }
+
+
 }

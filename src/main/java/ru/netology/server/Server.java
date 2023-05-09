@@ -1,7 +1,6 @@
 package ru.netology.server;
 
 import ru.netology.logger.Logger;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -21,17 +20,15 @@ public class Server {
         String HOST = "localhost";
 
         try {
-            File settings = new File("settings.txt");
+            File settings = new File("src/main/java/ru/netology/server/settings.txt");
             if (settings.createNewFile() || settings.exists()) {
-                //TODO: log
                 recordSettings(HOST, PORT);
             }
         } catch (IOException e) {
             e.printStackTrace();
-            //TODO: log
         }
 
-        System.out.println("сервер запущен");
+        System.out.println("Server start...");
         try (ServerSocket serverSocket = new ServerSocket(PORT)) {
             while (true) {
                 Socket clientSocket = serverSocket.accept();
@@ -42,14 +39,14 @@ public class Server {
             e.printStackTrace();
             //TODO: log
         } finally {
-            for(ClientHandler clientHandler: clientList) {
+            for (ClientHandler clientHandler : clientList) {
                 clientHandler.interrupt();
             }
         }
     }
 
     private void recordSettings(String HOST, int PORT) throws IOException {
-        FileWriter out = new FileWriter("settings.txt", false);
+        FileWriter out = new FileWriter("src/main/java/ru/netology/server/settings.txt", false);
         BufferedWriter in = new BufferedWriter(out);
         in.write("HOST " + HOST + "\n");
         in.write("PORT " + PORT);
