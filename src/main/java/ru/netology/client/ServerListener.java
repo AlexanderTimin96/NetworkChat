@@ -20,7 +20,7 @@ public class ServerListener extends Thread {
 
     @Override
     public void run() {
-        try {
+        try{
             while (!isInterrupted()) {
                 String responseServer = in.readLine();
                 System.out.println(responseServer);
@@ -28,7 +28,7 @@ public class ServerListener extends Thread {
                         + "} was accepted from the server and output to the console");
             }
         } catch (IOException e) {
-            logger.log(pathNamLogFile, LevelLog.ERROR, "Error with accept response from server");
+            logger.log(pathNamLogFile, LevelLog.ERROR, "Error when accepting response from server");
         }
     }
 }

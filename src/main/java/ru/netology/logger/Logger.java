@@ -27,8 +27,8 @@ public class Logger {
 
     public synchronized void log(String pathNameLogFile, LevelLog level, String msg) {
         try (BufferedWriter bf = new BufferedWriter(new FileWriter(pathNameLogFile, true))) {
-                bf.write("[" + dtf.format(LocalDateTime.now()) + "] (" + level + ") " + msg + "\n");
-                bf.flush();
+            bf.write("[" + dtf.format(LocalDateTime.now()) + "] (" + level + ") " + msg + "\n");
+            bf.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -36,14 +36,12 @@ public class Logger {
 
     public synchronized void createFileLog(String pathNameLogFile) {
         File file = new File(pathNameLogFile);
-       try {
-           if (!file.exists()) {
-               file.createNewFile();
-           }
-       }catch (IOException e) {
-           e.printStackTrace();
-       }
+        try {
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-
-
 }

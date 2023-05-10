@@ -1,0 +1,64 @@
+[2023/05/10 20:54:22] (INFO) Reading the settings...
+[2023/05/10 20:54:22] (INFO) HOST installed to localhost
+[2023/05/10 20:54:22] (INFO) PORT installed to 8080
+[2023/05/10 20:54:22] (INFO) Reading the settings is successful
+[2023/05/10 20:54:22] (INFO) The client is asked to enter a name
+[2023/05/10 20:54:24] (INFO) The client has set the name Alex
+[2023/05/10 20:54:24] (INFO) The client has connected with server (PORT: 8080HOST: localhost)
+[2023/05/10 20:54:24] (INFO) Send client's name to server
+[2023/05/10 20:54:24] (INFO) Starting the Serverlistener thread
+[2023/05/10 20:54:24] (INFO) Response {You connecting to NetworkChat with name: Alex. You can send messages:} was accepted from the server and output to the console
+[2023/05/10 20:54:32] (INFO) Response {[2023/05/10 20:54:32] Misha: Misha joined the chat!} was accepted from the server and output to the console
+[2023/05/10 20:54:35] (INFO) Response {[2023/05/10 20:54:35] Misha: Hi} was accepted from the server and output to the console
+[2023/05/10 20:54:42] (INFO) Reading message in console
+[2023/05/10 20:54:42] (INFO) Send {Hello!} to server
+[2023/05/10 20:54:55] (INFO) Response {[2023/05/10 20:54:55] Misha: How are you?} was accepted from the server and output to the console
+[2023/05/10 20:55:06] (INFO) Reading message in console
+[2023/05/10 20:55:06] (INFO) Send {I'm fine!} to server
+[2023/05/10 20:55:11] (INFO) Reading message in console
+[2023/05/10 20:55:11] (INFO) Send {/exit} to server. Exiting the chat
+[2023/05/10 21:00:39] (INFO) Reading the settings...
+[2023/05/10 21:00:39] (INFO) HOST installed to localhost
+[2023/05/10 21:00:39] (INFO) PORT installed to 8080
+[2023/05/10 21:00:39] (INFO) Reading the settings is successful
+[2023/05/10 21:00:39] (INFO) The client is asked to enter a name
+[2023/05/10 21:00:42] (INFO) The client has set the name dsfsdf
+[2023/05/10 21:00:42] (INFO) The client has connected with server (PORT: 8080HOST: localhost)
+[2023/05/10 21:00:42] (INFO) Send client's name to server
+[2023/05/10 21:00:42] (INFO) Starting the Serverlistener thread
+[2023/05/10 21:00:42] (INFO) Response {You connecting to NetworkChat with name: dsfsdf. You can send messages:} was accepted from the server and output to the console
+[2023/05/10 21:00:55] (ERROR) Error when accepting response from server
+[2023/05/10 21:00:58] (INFO) Reading message in console
+[2023/05/10 21:00:58] (INFO) Send {fvfdv} to server
+[2023/05/10 21:02:28] (INFO) Reading the settings...
+[2023/05/10 21:02:28] (INFO) HOST installed to localhost
+[2023/05/10 21:02:28] (INFO) PORT installed to 8080
+[2023/05/10 21:02:28] (INFO) Reading the settings is successful
+[2023/05/10 21:02:28] (INFO) The client is asked to enter a name
+[2023/05/10 21:02:29] (INFO) The client has set the name dfs
+[2023/05/10 21:02:29] (INFO) The client has connected with server (PORT: 8080HOST: localhost)
+[2023/05/10 21:02:29] (INFO) Send client's name to server
+[2023/05/10 21:02:29] (INFO) Starting the Serverlistener thread
+[2023/05/10 21:02:29] (INFO) Response {You connecting to NetworkChat with name: dfs. You can send messages:} was accepted from the server and output to the console
+[2023/05/10 21:02:50] (INFO) Response {[2023/05/10 21:02:50] ryeryt: ryeryt joined the chat!} was accepted from the server and output to the console
+[2023/05/10 21:03:20] (INFO) Response {[2023/05/10 21:03:20] ryeryt: 1} was accepted from the server and output to the console
+[2023/05/10 21:03:35] (INFO) Reading message in console
+[2023/05/10 21:03:35] (INFO) Send {2} to server
+[2023/05/10 21:03:50] (INFO) Reading message in console
+[2023/05/10 21:03:50] (INFO) Send {/exit} to server. Exiting the chat
+[2023/05/10 21:06:18] (INFO) Reading the settings...
+[2023/05/10 21:06:18] (INFO) HOST installed to localhost
+[2023/05/10 21:06:18] (INFO) PORT installed to 8080
+[2023/05/10 21:06:18] (INFO) Reading the settings is successful
+[2023/05/10 21:06:18] (INFO) The client is asked to enter a name
+[2023/05/10 21:06:21] (INFO) The client has set the name erg
+[2023/05/10 21:06:21] (INFO) The client has connected with server (PORT: 8080HOST: localhost)
+[2023/05/10 21:06:21] (INFO) Send client's name to server
+[2023/05/10 21:06:21] (INFO) Starting the Serverlistener thread
+[2023/05/10 21:06:21] (INFO) Response {You connecting to NetworkChat with name: erg. You can send messages:} was accepted from the server and output to the console
+[2023/05/10 21:06:25] (INFO) Response {[2023/05/10 21:06:25] ergreg: ergreg joined the chat!} was accepted from the server and output to the console
+[2023/05/10 21:06:29] (INFO) Reading message in console
+[2023/05/10 21:06:29] (INFO) Send {vjh} to server
+[2023/05/10 21:06:31] (INFO) Reading message in console
+[2023/05/10 21:06:31] (INFO) Send {hgvh} to server
+[2023/05/10 21:06:38] (INFO) Response {[2023/05/10 21:06:38] ergreg: ergreg left the chat!} was accepted from the server and output to the console

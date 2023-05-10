@@ -10,17 +10,21 @@ import java.util.Scanner;
 public class Client {
     private String HOST;
     private int PORT;
+
     private final String name;
-    private static final String PATH_NAME_SETTINGS = "src/main/java/ru/netology/server/settings.txt";
-    private final Scanner scanner = new Scanner(System.in);
-    private final Logger logger = Logger.getInstance();
+
+    private static final String pathNameSettings = "src/main/java/ru/netology/server/settings.txt";
     private final String pathNameLogFile;
 
-    public Client(String pathNameLogFile) {
-        readSettings(PATH_NAME_SETTINGS);
+    private final Scanner scanner = new Scanner(System.in);
+    private final Logger logger = Logger.getInstance();
 
+
+    public Client(String pathNameLogFile) {
         this.pathNameLogFile = pathNameLogFile;
-        logger.createFileLog(this.pathNameLogFile);
+        logger.createFileLog(pathNameLogFile);
+
+        readSettings(pathNameSettings);
 
         System.out.println("Write you nickname(nickname must consist of three or more characters):");
         String inputName;
@@ -49,7 +53,7 @@ public class Client {
                 out.flush();
                 logger.log(pathNameLogFile, LevelLog.INFO, "Send client's name to server");
             } catch (IOException e) {
-                logger.log(pathNameLogFile, LevelLog.ERROR, "Error with send client's name to server");
+                logger.log(pathNameLogFile, LevelLog.ERROR, "Error when sending client's name to server");
             }
 
             ServerListener serverListener = new ServerListener(in, pathNameLogFile);
@@ -62,7 +66,7 @@ public class Client {
                 logger.log(pathNameLogFile, LevelLog.INFO, "Reading message in console");
                 try {
                     if (msg.equals("/exit")) {
-                        out.write("/exit");
+                        out.write("/exit\n");
                         out.flush();
                         logger.log(pathNameLogFile, LevelLog.INFO, "Send {" + msg + "} to server. Exiting the chat");
                         break;
@@ -71,19 +75,21 @@ public class Client {
                     out.flush();
                     logger.log(pathNameLogFile, LevelLog.INFO, "Send {" + msg + "} to server");
                 } catch (IOException e) {
-                    logger.log(pathNameLogFile, LevelLog.ERROR, "Error with send message to server");
+                    logger.log(pathNameLogFile, LevelLog.ERROR, "Error when sending message to server");
                 }
             }
+
             serverListener.interrupt();
+            in.close();
             scanner.close();
         } catch (IOException e) {
             logger.log(pathNameLogFile, LevelLog.ERROR, "Error with connection to server (PORT: "
-                    + PORT + "HOST: " + HOST + ")");
+                    + PORT + ", HOST: " + HOST + ")");
         }
     }
 
-    private void readSettings(String pathNameSetting) {
-        try (BufferedReader in = new BufferedReader(new FileReader(pathNameSetting))) {
+    private void readSettings(String pathNameSettings) {
+        try (BufferedReader in = new BufferedReader(new FileReader(pathNameSettings))) {
             logger.log(pathNameLogFile, LevelLog.INFO, "Reading the settings...");
             String line;
             while ((line = in.readLine()) != null) {
@@ -98,9 +104,9 @@ public class Client {
             }
             logger.log(pathNameLogFile, LevelLog.INFO, "Reading the settings is successful");
         } catch (IOException e) {
-            logger.log(pathNameLogFile, LevelLog.ERROR, "Error reading the settings");
+            logger.log(pathNameLogFile, LevelLog.ERROR, "Error when reading the settings");
         } catch (NumberFormatException e) {
-            logger.log(pathNameLogFile, LevelLog.ERROR, "Error when parsing the PORT");
+            logger.log(pathNameLogFile, LevelLog.ERROR, "Error when when parsing the PORT");
         }
     }
 }

@@ -1,0 +1,54 @@
+[2023/05/10 20:54:11] (INFO) Recording the setting is successful
+[2023/05/10 20:54:11] (INFO) Server starting (8080). Waiting for connections
+[2023/05/10 20:54:24] (INFO) The new connection is redirected to the ClientHandler thread
+[2023/05/10 20:54:24] (INFO) Name {Alex} received from client
+[2023/05/10 20:54:24] (INFO) Setting the client name
+[2023/05/10 20:54:24] (INFO) Response to the client(Alex): You connecting to NetworkChat with name: Alex. You can send messages:
+[2023/05/10 20:54:32] (INFO) The new connection is redirected to the ClientHandler thread
+[2023/05/10 20:54:32] (INFO) Name {Misha} received from client
+[2023/05/10 20:54:32] (INFO) Setting the client name
+[2023/05/10 20:54:32] (INFO) Response to the client(Misha): You connecting to NetworkChat with name: Misha. You can send messages:
+[2023/05/10 20:54:32] (INFO) Send to the client(Alex): Misha joined the chat!
+[2023/05/10 20:54:35] (INFO) Send to the client(Alex): Hi
+[2023/05/10 20:54:42] (INFO) Send to the client(Misha): Hello!
+[2023/05/10 20:54:55] (INFO) Send to the client(Alex): How are you?
+[2023/05/10 20:55:06] (INFO) Send to the client(Misha): I'm fine!
+[2023/05/10 20:59:16] (INFO) Recording the setting is successful
+[2023/05/10 20:59:16] (INFO) Server starting (8080). Waiting for connections
+[2023/05/10 21:00:33] (INFO) The new connection is redirected to the ClientHandler thread
+[2023/05/10 21:00:33] (INFO) Name {dsfsd} received from client
+[2023/05/10 21:00:33] (INFO) Setting the client name
+[2023/05/10 21:00:33] (INFO) Response to the client(dsfsd): You connecting to NetworkChat with name: dsfsd. You can send messages:
+[2023/05/10 21:00:42] (INFO) The new connection is redirected to the ClientHandler thread
+[2023/05/10 21:00:42] (INFO) Name {dsfsdf} received from client
+[2023/05/10 21:00:42] (INFO) Setting the client name
+[2023/05/10 21:00:42] (INFO) Response to the client(dsfsdf): You connecting to NetworkChat with name: dsfsdf. You can send messages:
+[2023/05/10 21:00:42] (INFO) Send to the client(dsfsd): dsfsdf joined the chat!
+[2023/05/10 21:02:18] (INFO) Recording the setting is successful
+[2023/05/10 21:02:18] (INFO) Server starting (8080). Waiting for connections
+[2023/05/10 21:02:29] (INFO) The new connection is redirected to the ClientHandler thread
+[2023/05/10 21:02:29] (INFO) Name {dfs} received from client
+[2023/05/10 21:02:29] (INFO) Setting the client name
+[2023/05/10 21:02:29] (INFO) Response to the client(dfs): You connecting to NetworkChat with name: dfs. You can send messages:
+[2023/05/10 21:02:49] (INFO) The new connection is redirected to the ClientHandler thread
+[2023/05/10 21:02:50] (INFO) Name {ryeryt} received from client
+[2023/05/10 21:02:50] (INFO) Setting the client name
+[2023/05/10 21:02:50] (INFO) Response to the client(ryeryt): You connecting to NetworkChat with name: ryeryt. You can send messages:
+[2023/05/10 21:02:50] (INFO) Send to the client(dfs): ryeryt joined the chat!
+[2023/05/10 21:03:20] (INFO) Send to the client(dfs): 1
+[2023/05/10 21:03:39] (INFO) Send to the client(ryeryt): 2
+[2023/05/10 21:06:12] (INFO) Recording the setting is successful
+[2023/05/10 21:06:12] (INFO) Server starting (8080). Waiting for connections
+[2023/05/10 21:06:21] (INFO) The new connection is redirected to the ClientHandler thread
+[2023/05/10 21:06:21] (INFO) Name {erg} received from client
+[2023/05/10 21:06:21] (INFO) Setting the client name
+[2023/05/10 21:06:21] (INFO) Response to the client(erg): You connecting to NetworkChat with name: erg. You can send messages:
+[2023/05/10 21:06:25] (INFO) The new connection is redirected to the ClientHandler thread
+[2023/05/10 21:06:25] (INFO) Name {ergreg} received from client
+[2023/05/10 21:06:25] (INFO) Setting the client name
+[2023/05/10 21:06:25] (INFO) Response to the client(ergreg): You connecting to NetworkChat with name: ergreg. You can send messages:
+[2023/05/10 21:06:25] (INFO) Send to the client(erg): ergreg joined the chat!
+[2023/05/10 21:06:29] (INFO) Send to the client(ergreg): vjh
+[2023/05/10 21:06:31] (INFO) Send to the client(ergreg): hgvh
+[2023/05/10 21:06:38] (INFO) The client(ergregexited the chat. Closing the ClientHandler thread
+[2023/05/10 21:06:38] (INFO) Send to the client(erg): ergreg left the chat!
