@@ -47,7 +47,7 @@ public class Client {
              BufferedWriter out = new BufferedWriter(new PrintWriter(clientSocket.getOutputStream()));
              BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
             logger.log(pathNameLogFile, LevelLog.INFO, "The client has connected with server (PORT: "
-                    + PORT + "HOST: " + HOST + ")");
+                    + PORT + " HOST:" + HOST + ")");
             try {
                 out.write(name + "\n");
                 out.flush();
@@ -68,7 +68,9 @@ public class Client {
                     if (msg.equals("/exit")) {
                         out.write("/exit\n");
                         out.flush();
+                        System.out.println("You have left the chat!");
                         logger.log(pathNameLogFile, LevelLog.INFO, "Send {" + msg + "} to server. Exiting the chat");
+                        serverListener.interrupt();
                         break;
                     }
                     out.write(msg + "\n");
@@ -78,8 +80,6 @@ public class Client {
                     logger.log(pathNameLogFile, LevelLog.ERROR, "Error when sending message to server");
                 }
             }
-
-            serverListener.interrupt();
             in.close();
             scanner.close();
         } catch (IOException e) {

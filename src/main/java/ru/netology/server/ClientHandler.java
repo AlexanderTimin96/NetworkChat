@@ -36,7 +36,7 @@ public class ClientHandler extends Thread {
             String name = in.readLine();
             logger.log(pathNameLogFile, LevelLog.INFO, "Name {" + name + "} received from client");
             setName(name);
-            System.out.println("The client(" + name + " is connected");
+            System.out.println("The client(" + name + ") is connected");
             logger.log(pathNameLogFile, LevelLog.INFO, "Setting the client name");
             sendMsg("You connecting to NetworkChat with name: " + name + ". You can send messages:");
             sendMsgToOtherClients(name + " joined the chat!");

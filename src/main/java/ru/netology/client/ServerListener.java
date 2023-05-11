@@ -20,12 +20,14 @@ public class ServerListener extends Thread {
 
     @Override
     public void run() {
-        try{
+        try {
             while (!isInterrupted()) {
                 String responseServer = in.readLine();
-                System.out.println(responseServer);
-                logger.log(pathNamLogFile, LevelLog.INFO, "Response {" + responseServer
-                        + "} was accepted from the server and output to the console");
+                if (responseServer != null) {
+                    System.out.println(responseServer);
+                    logger.log(pathNamLogFile, LevelLog.INFO, "Response {" + responseServer
+                            + "} was accepted from the server and output to the console");
+                }
             }
         } catch (IOException e) {
             logger.log(pathNamLogFile, LevelLog.ERROR, "Error when accepting response from server");
