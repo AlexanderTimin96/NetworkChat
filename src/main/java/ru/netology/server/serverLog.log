@@ -17,3 +17,29 @@
 [2023/05/11 20:37:30] (INFO) The client(Alexexited the chat. Closing the ClientHandler thread
 [2023/05/11 20:37:30] (INFO) Send to the client(Zhenya):  left the chat!
 [2023/05/11 20:37:38] (INFO) The client(Zhenyaexited the chat. Closing the ClientHandler thread
+[2023/05/12 18:25:38] (INFO) Recording the setting is successful
+[2023/05/12 18:25:38] (INFO) Server starting (8080). Waiting for connections
+[2023/05/12 18:25:54] (INFO) The new connection is redirected to the ClientHandler thread
+[2023/05/12 18:25:55] (INFO) Name {Женя} received from client
+[2023/05/12 18:25:55] (INFO) Setting the client name
+[2023/05/12 18:25:55] (INFO) Response to the client(Женя): You connecting to NetworkChat with name: Женя. You can send messages:
+[2023/05/12 18:26:00] (INFO) The new connection is redirected to the ClientHandler thread
+[2023/05/12 18:26:00] (INFO) Name {Ира} received from client
+[2023/05/12 18:26:00] (INFO) Setting the client name
+[2023/05/12 18:26:00] (INFO) Response to the client(Ира): You connecting to NetworkChat with name: Ира. You can send messages:
+[2023/05/12 18:26:00] (INFO) Send to the client(Женя): Ира joined the chat!
+[2023/05/12 18:26:08] (INFO) Send to the client(Ира): Привет
+[2023/05/14 08:57:16] (INFO) Recording the setting is successful
+[2023/05/14 08:57:16] (INFO) Server starting (8080). Waiting for connections
+[2023/05/14 08:57:34] (INFO) The new connection is redirected to the ClientHandler thread
+[2023/05/14 08:57:34] (INFO) Name {Alex} received from client
+[2023/05/14 08:57:34] (INFO) Setting the client name
+[2023/05/14 08:57:34] (INFO) Response to the client(Alex): You connecting to NetworkChat with name: Alex. You can send messages:
+[2023/05/14 08:57:39] (INFO) The new connection is redirected to the ClientHandler thread
+[2023/05/14 08:57:39] (INFO) Name {Sasha} received from client
+[2023/05/14 08:57:39] (INFO) Setting the client name
+[2023/05/14 08:57:39] (INFO) Response to the client(Sasha): You connecting to NetworkChat with name: Sasha. You can send messages:
+[2023/05/14 08:57:39] (INFO) Send to the client(Alex): Sasha joined the chat!
+[2023/05/14 08:57:52] (INFO) The client(Alexexited the chat. Closing the ClientHandler thread
+[2023/05/14 08:57:52] (INFO) Send to the client(Sasha):  left the chat!
+[2023/05/14 08:58:01] (INFO) The client(Sashaexited the chat. Closing the ClientHandler thread

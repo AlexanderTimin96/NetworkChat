@@ -44,7 +44,7 @@ public class ClientHandler extends Thread {
             while (true) {
                 String msg = in.readLine();
                 if ("/exit".equals(msg)) {
-                    logger.log(pathNameLogFile, LevelLog.INFO, "The client(" + getName() + "exited the chat. Closing the ClientHandler thread");
+                    logger.log(pathNameLogFile, LevelLog.INFO, "The client(" + getName() + ") exited the chat. Closing the ClientHandler thread");
                     sendMsgToOtherClients(" left the chat!");
                     out.close();
                     in.close();

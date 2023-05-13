@@ -19,3 +19,27 @@
 [2023/05/11 20:37:30] (INFO) Response {[2023/05/11 20:37:30] Alex:  left the chat!} was accepted from the server and output to the console
 [2023/05/11 20:37:38] (INFO) Reading message in console
 [2023/05/11 20:37:38] (INFO) Send {/exit} to server. Exiting the chat
+[2023/05/12 18:25:44] (INFO) Reading the settings...
+[2023/05/12 18:25:44] (INFO) HOST installed to localhost
+[2023/05/12 18:25:44] (INFO) PORT installed to 8080
+[2023/05/12 18:25:44] (INFO) Reading the settings is successful
+[2023/05/12 18:25:44] (INFO) The client is asked to enter a name
+[2023/05/12 18:26:00] (INFO) The client has set the name Ира
+[2023/05/12 18:26:00] (INFO) The client has connected with server (PORT: 8080 HOST:localhost)
+[2023/05/12 18:26:00] (INFO) Send client's name to server
+[2023/05/12 18:26:00] (INFO) Starting the Serverlistener thread
+[2023/05/12 18:26:00] (INFO) Response {You connecting to NetworkChat with name: Ира. You can send messages:} was accepted from the server and output to the console
+[2023/05/12 18:26:08] (INFO) Response {[2023/05/12 18:26:08] Женя: Привет} was accepted from the server and output to the console
+[2023/05/14 08:57:23] (INFO) Reading the settings...
+[2023/05/14 08:57:23] (INFO) HOST installed to localhost
+[2023/05/14 08:57:23] (INFO) PORT installed to 8080
+[2023/05/14 08:57:23] (INFO) Reading the settings is successful
+[2023/05/14 08:57:23] (INFO) The client is asked to enter a name
+[2023/05/14 08:57:39] (INFO) The client has set the name Sasha
+[2023/05/14 08:57:39] (INFO) The client has connected with server (PORT: 8080 HOST:localhost)
+[2023/05/14 08:57:39] (INFO) Send client's name to server
+[2023/05/14 08:57:39] (INFO) Starting the Serverlistener thread
+[2023/05/14 08:57:39] (INFO) Response {You connecting to NetworkChat with name: Sasha. You can send messages:} was accepted from the server and output to the console
+[2023/05/14 08:57:52] (INFO) Response {[2023/05/14 08:57:52] Alex:  left the chat!} was accepted from the server and output to the console
+[2023/05/14 08:58:01] (INFO) Reading message in console
+[2023/05/14 08:58:01] (INFO) Send {/exit} to server. Exiting the chat
