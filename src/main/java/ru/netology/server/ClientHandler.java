@@ -10,13 +10,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class ClientHandler extends Thread {
-    Socket socket;
-    public BufferedWriter out;
-    private BufferedReader in;
     private final List<ClientHandler> clientList;
     private final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
     private final Logger logger = Logger.getInstance();
     private final String pathNameLogFile;
+    public BufferedWriter out;
+    Socket socket;
+    private BufferedReader in;
 
     public ClientHandler(Socket socket, List<ClientHandler> clientList, String pathNameLogFile) {
         this.socket = socket;

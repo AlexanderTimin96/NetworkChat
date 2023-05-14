@@ -8,16 +8,13 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Client {
-    private String HOST;
-    private int PORT;
-
+    private static final String pathNameSettings = "src/main/java/ru/netology/server/settings/settings.txt";
     private final String name;
-
-    private static final String pathNameSettings = "src/main/java/ru/netology/server/settings.txt";
     private final String pathNameLogFile;
-
     private final Scanner scanner = new Scanner(System.in);
     private final Logger logger = Logger.getInstance();
+    private String HOST;
+    private int PORT;
 
 
     public Client(String pathNameLogFile) {

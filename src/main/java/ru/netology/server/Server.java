@@ -14,15 +14,12 @@ import java.util.Collections;
 import java.util.List;
 
 public class Server {
+    private final static Logger logger = Logger.getInstance();
+    private static final String pathNameSettings = "src/main/java/ru/netology/server/settings/settings.txt";
+    private final String pathNameLogFile = "src/main/java/ru/netology/server/log/serverLog.log";
+    private final List<ClientHandler> clientList = Collections.synchronizedList(new ArrayList<>());
     public int PORT = 8080;
     public String HOST = "localhost";
-
-    private final static Logger logger = Logger.getInstance();
-    private final String pathNameLogFile = "src/main/java/ru/netology/server/serverLog.log";
-
-    private static final String pathNameSettings = "src/main/java/ru/netology/server/settings.txt";
-
-    private final List<ClientHandler> clientList = Collections.synchronizedList(new ArrayList<>());
 
     public void start() {
         try {
